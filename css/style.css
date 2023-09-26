@@ -1,0 +1,440 @@
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+/* general */
+
+body {
+  background-color: rgb(58, 96, 110);
+}
+
+body * {
+  font-family: 'Poppins';
+  color: rgb(245, 240, 246);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar,
+.services-container::-webkit-scrollbar,
+.scrolling-list::-webkit-scrollbar {
+  display: none;
+}
+
+/* destyling */
+
+li,
+a,
+i {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* states */
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* layout */
+
+.container {
+  display: flex;
+}
+
+nav ul,
+nav li,
+.service-col,
+.features-col,
+.logo,
+footer ul {
+  flex: 1;
+}
+
+/* colors */
+
+main,
+.features,
+footer {
+  background-color: rgb(200, 204, 213);
+}
+
+header *,
+.features *,
+footer * {
+  color: rgb(58, 96, 110);
+}
+
+/* tyopgraphy */
+
+h1,
+.services p {
+  font-weight: 200;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+main section:not(.logo),
+.services,
+.tenoff,
+.features {
+  text-align: center;
+}
+
+nav ul,
+nav li,
+button {
+  font-variant: small-caps;
+}
+
+li,
+a,
+i,
+.services i {
+  font-weight: bold
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* header =================================*/
+
+/* nav ================================ */
+
+header {
+  padding: 1rem 1rem 0 1rem;
+}
+
+header section {
+  flex: 2;
+}
+
+nav ul,
+nav li {
+  padding: 0 1rem;
+}
+
+.logo {
+  text-align: left;
+}
+
+/* main =================================== 
+note to self:
+main = .main-img-container + .main-words
+main section = h1 + button  */
+
+main {
+  height: 90vh;
+  background-image: url(https://i.ibb.co/MMXpj1c/kimson-doan-main.png);
+  background-size: 100vh;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+}
+
+main section:not(.logo) {
+  max-width: 100%;
+}
+
+h1 {
+  color: rgb(61, 122, 121);
+  font-size: 8rem;
+  padding-top: 20rem;
+  text-shadow: 0.5rem -0.1rem rgba(185, 107, 150, 0.3);
+  letter-spacing: 1rem;
+}
+
+/* buttons ================================= */
+
+button {
+  display: block;
+  background: rgb(50, 88, 102);
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  border: none;
+}
+
+main button {
+  box-shadow: 0.5rem -0.1rem rgba(185, 107, 150, 0.3);
+}
+
+.services button {
+  border: 0.1rem solid white;
+}
+
+button:hover {
+  background: rgb(40, 70, 81);
+}
+
+
+/* services section 
+.services ====================================*/
+
+.services {
+  padding: 5rem 2rem;
+}
+
+.services-container {
+  padding-top: 3rem;
+}
+
+.services h2 {
+  /* font-size: 4rem; */
+  padding: 1rem 0;
+  margin: 0 20%;
+  border: 2px solid rgb(191, 238, 238);
+}
+
+.services i {
+  margin-top: 2rem;
+}
+
+.services h3 {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.services p {
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+.service-col {
+  justify-content: center;
+}
+
+.service-col img {
+  border: 4px solid rgb(245, 240, 246);
+  width: 20vw;
+}
+
+/* tenoff section 
+.tenoff ====================================*/
+
+.tenoff {
+  position: relative;
+  height: 80vh;
+  width: 100%;
+  padding-bottom: 1rem;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50rem;
+  transition: 0.3s ease;
+  background-image: url(https://i.ibb.co/YD7ymRT/tahiti-spears-unsplash.jpg);
+}
+
+.tenoff h2 {
+  padding-top: 6rem;
+}
+
+.tenoff p {
+  font-size: 0.8rem;
+}
+
+/* features section 
+.features ====================================*/
+
+.features {
+  padding: 5rem 2rem 2rem 2rem;
+  margin-top: 5rem;
+}
+
+.features h4 {
+  margin-top: 1rem;
+}
+
+.features p {
+  font-size: 0.8rem;
+  margin-top: 0.75rem;
+  padding: 0 10%;
+}
+
+.features ul {
+  margin-top: 2rem;
+}
+
+.features i {
+  font-size: 6rem;
+  display: block;
+}
+
+.features-col {
+  padding: 4rem 1rem;
+}
+
+/* footer */
+
+footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+
+footer nav ul {
+  text-align: right;
+}
+
+.credits {
+  text-align: center;
+  font-size: 0.7rem;
+}
+
+/******************************************
+/* MEDIA QUERIES
+/*******************************************/
+
+/* large ==================================*/
+@media all and (max-width: 1200px) {
+  /* header */
+
+  /* main */
+
+  main {
+    background-size: 70vw;
+    height: 100vh;
+  }
+
+  main h1 {
+    padding-top: 22rem;
+  }
+
+  /* $10 off section */
+
+  .tenoff {
+    height: 70vh;
+  }
+
+  .tenoff h2 {
+    padding-top: 3.5rem;
+  }
+
+}
+
+/* medium ==================================*/
+
+@media all and (max-width: 900px) {
+  /* header */
+
+  nav li,
+  header section a {
+    display: none;
+  }
+
+  nav i {
+    display: block;
+  }
+
+  /* main */
+  main {
+    height: 90vh;
+    background-size: 70vh;
+  }
+
+  main h1 {
+    font-size: 6rem;
+    padding-top: 60vh;
+  }
+
+  /* .services section */
+
+  .services-container {
+    width: 100%;
+    overflow-x: scroll;
+    padding: 0;
+  }
+
+  .service-col {
+    flex: 0 0 100%;
+  }
+
+  .service-col img {
+    width: 50vw;
+  }
+
+  /*.tenoff section*/
+
+  .tenoff {
+    height: 45vh;
+  }
+
+  .tenoff h2 {
+    padding-top: 1rem;
+  }
+}
+
+/* small ====================================*/
+
+@media all and (max-width: 600px) {
+  /* header */
+
+  /* main */
+
+  main h1 {
+    padding-top: 40vh;
+  }
+
+  /* .services section */
+
+  .services h2 {
+    font-size: 2rem;
+  }
+
+  /*.tenoff section*/
+
+  .tenoff {
+    height: 50vh;
+  }
+
+  .tenoff h2 {
+    font-size: 2rem;
+  }
+
+  /* .features section */
+  .features i {
+    font-size: 3rem;
+  }
+
+  .features section {
+    flex-direction: column;
+  }
+
+}
+
+/* very small=============================== */
+
+@media all and (max-width: 300px) {
+
+  main h1 {
+    font-size: 4rem;
+  }
+
+  .services h2 {
+    margin: 0 auto;
+  }
+
+  .tenoff {
+    height: 58vh;
+  }
+
+  .tenoff h2 {
+    font-size: 1.5rem;
+    padding: 2rem 0 0.5rem 0;
+  }
+
+}
+
+/* one offs ================================ */
+
+@media all and (min-width: 900px) {
+
+  #logo-bars,
+  .services i {
+    display: none;
+  }
+}
